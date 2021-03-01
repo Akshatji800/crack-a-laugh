@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Board from "./Board";
+import { Board } from "./Board.jsx";
 import "./App.css";
 
 /** Simple app that just shows the LightsOut game. */
@@ -11,7 +11,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Board />
+        <Board
+          nrows={6}
+          ncols={8}
+          chanceLightStartsOn={0.25}
+        />
+
       </div>
     );
   }
